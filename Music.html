@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Music</title>
+<link rel="stylesheet" href="stylesheet.css" />
+<style>
+
+div#container{
+	width:100%; 
+    margin:0px auto;
+}
+div#title{
+	width:100%;
+    height:250px;
+    text-align:center;
+
+}
+div#music{
+
+	width: 100%;
+	height:140px;
+	text-align:center;
+}
+div#buttons{
+	width: 100%;
+	height: 50px;
+	text-align:center;
+	
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+<div id="title">
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<h1>title</h1>
+</div>
+<div id="music">
+	<audio controls="controls" height="500" width="500">
+	  <source src="D:\application\酷狗音乐\song\1973 - James Blunt.mp3" type="audio/mp3" />
+	  <source src="song.ogg" type="audio/ogg" />
+	<embed height="100" width="100" src="song.mp3" />
+	</audio>
+</div>
+<div id="buttons">
+	<input type="image" name="Photo" value="Photo" src = "photo button.gif" alt = "Photo" style="height:50px; width:170px;" onClick="location.href='a.html'"/>
+	<input type="image" name="Video" value="Video" src = "Video button.gif" alt = "Video" style="height:50px; width:170px;" onClick="location.href='a.html'"/>
+	<input type="image" name="Music" value="Music" src = "Music button.gif" alt = "Music" style="height:50px; width:170px;" onClick="location.href='a.html'"/>
+	
+	<input type="image" name="Exit" value="Exit" src = "exit.gif" alt = "Exit" style="height: 50px; width: 170px;" onClick= "location.href='a.html'"/>
+</div>
+</div>
+
+
+</body>
+</html>
