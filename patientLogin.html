@@ -3,126 +3,70 @@
 
 <head>
 	<meta charset="utf-8" />
+	<link rel="stylesheet" href="./CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="./CSS/stylesheet.css">
 	<title>Login</title>
-	
-	<style>
-		.ybutton{
-			font-size:200%;
-			text-transform: uppercase;
-			color: white;
-			text-shadow: 0.05em 0.05em #e6ac00;
-			padding: 0.3em;
-			padding-left:1.5em;
-			padding-right:1.5em;
-			background: linear-gradient(#ffd966, #ffbf00);
-			border-color:  #FFD85E;
-			border-radius: 0.1em;
-		}
-		body{
-			background-color:	#b3f0ff;
-		}
-		h2 {
-			font-family:Arial, Helvetica, sans-serif;
-			text-align: center;
-			font-size:350%;
-			margin: 1%;
-			margin-top: 2%;
-		}
-		h3 {
-			font-family:Arial, Helvetica, sans-serif;
-			text-align: center;
-			font-size:1em;
-			margin: 10%;
-		}
-		
-		.avator{
-			display: inline-block;
-			margin: 1%;
-			margin-left: 10%;
-			background-color: #ffbf00;
-			padding: 1%;
-			padding-bottom: 0%;
-			background: linear-gradient(#ffd966, #ffbf00);
-			border-color:  #FFD85E;
-			border-radius: 0.2em;
-			border: 0.2em;
-			border-color:  #FFD85E;
-			border-style: outset;
-		}
-		.previous{
-			margin-right: 7%;
-			text-align: left;
-			display: inline-block;
-		}
-		input{
-			font-size:100%;
-			width: 10em;
-			font-family:Arial, Helvetica, sans-serif;
-		}
-		p{
-			font-size:175%;
-			font-family:Arial, Helvetica, sans-serif;
-		}
-		.search{
-			text-align: right;
-			margin-left: 7%;
-			display: inline-block;
-		}
-
-		
-	</style>
 </head>
 
 <body>
-	<h2>Find your profile</h2>
-	<div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-	</div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-	</div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-	</div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-	</div>
-	</div>
+
+	<div id="banner">
+    	<h2>Find your profile</h2>
+    </div> <!-- banner -->
+    
+	<div id="navigation">
+  	</div>
+    
+	<div id="main">
+    <div class="row">
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+    </div>
+    <div class="row">
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+        <div id="avator">
+          <a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
+          <h3>Name</h3></a>
+        </div>
+    </div>
+    </div>
 	
-	<div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-	</div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-		</div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-		</div>
-	<div class="avator">
-		<a href="topicPage.html"><img class="img" src="avator2.png" alt="user" height=150>
-		<h3>Name</h3></a>
-		</div>
-	</div>
 	
-	<div>
-	<div class="previous">
-		<button class="ybutton" href="#">Previous</button>
-	</div>
-	<div class="search">
+	<div  id="footer">
+		<div class = "previous">
+			<a href="first page.html"><button class="ybutton" href="#">Previous</button></a>
+		</div>
+		 
+		<div class="search">
 		<form>
-			<p>Search:<input type="text" name="name" placeholder="name" class="search" style="display: inline-block;">
-			</p>
+			<p>Search:<input type="text" name="name" placeholder="name" style="font-size: 100%;"></p>
 		</form>
-	</div>
+		</div>
 	</div>
 
 </body>
