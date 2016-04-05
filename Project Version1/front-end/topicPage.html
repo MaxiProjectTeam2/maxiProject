@@ -23,13 +23,50 @@
   </div>
 
   <div id="footer">
+
+	  <?php
+
+		require_once("database.php");
+
+  		$findTopics = "SELECT COUNT(DISTINCT topic) ";
+  		$findTopics .= "as total FROM content;";
+
+  		// "resource" object - collection of rows
+  		$topicQuery = $db->query($findTopics);
+	  	$noOfTopics = $db->fetch_assoc($topicQuery);
+	  	echo $noOfTopics['total']; // exchange for num_rows?
+
+	  	// randomly pick 3 topics
+	  	$topicIndices = range(1,$noOfTopics['total']);
+	  	shuffle($topicIndices);
+
+	  	$getTopic1 = "SELECT DISTINCT topic as topic1 FROM content LIMIT ";
+	  	$getTopic1 .= strval($topicIndices[0]-1) . ", " . strval($topicIndices[0] . ";");
+	  	$getTopic2 = "SELECT DISTINCT topic as topic2 FROM content LIMIT ";
+	  	$getTopic2 .= strval($topicIndices[1]-1) . ", " . strval($topicIndices[1] . ";");
+	  	$getTopic3 = "SELECT DISTINCT topic as topic3 FROM content LIMIT ";
+	  	$getTopic3 .= strval($topicIndices[2]-1) . ", " . strval($topicIndices[2] . ";");
+
+	  	$topic1 = $db->query($getTopic1);
+	  	$topicA = $db->fetch_assoc($topic1);
+
+	  	$topic2 = $db->query($getTopic2);
+	  	$topicB = $db->fetch_assoc($topic2);
+
+	  	$topic3 = $db->query($getTopic3);
+	  	$topicC = $db->fetch_assoc($topic3);
+
+	  	echo "<br/> 3 topics are: " . $topicA['topic1'] . ", " . $topicB['topic2'] . ", " . $topicC['topic3'];
+
+	  ?>
+
   	<div class = "row">
   		<div class="col-md-4">
   			 <div class="dropup">
    				<button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Childhood<span class="caret"></span></button>
     			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Vedio.html">Video</a></li>
-      			<li role="presentation"><a role="menuitem" tabindex="-1" href="#	">Photograph</a></li>
+      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Video.html">Video</a></li>
+      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Picture.html">Photograph</a></li>
       			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Music.html">Music</a></li>
     			</ul>
 			</div>
@@ -38,8 +75,8 @@
   			 <div class="dropup">
    				<button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Childhood<span class="caret"></span></button>
     			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Vedio.html">Video</a></li>
-      			<li role="presentation"><a role="menuitem" tabindex="-1" href="#	">Photograph</a></li>
+      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Video.html">Video</a></li>
+      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Picture.html">Photograph</a></li>
       			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Music.html">Music</a></li>
     			</ul>
 			</div>
@@ -48,8 +85,8 @@
   			 <div class="dropup">
    				<button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Childhood<span class="caret"></span></button>
     			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Vedio.html">Video</a></li>
-      			<li role="presentation"><a role="menuitem" tabindex="-1" href="#	">Photograph</a></li>
+      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Video.html">Video</a></li>
+      			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Picture.html">Photograph</a></li>
       			<li role="presentation"><a role="menuitem" tabindex="-1" href="topicPage-Music.html">Music</a></li>
     			</ul>
 			</div>
