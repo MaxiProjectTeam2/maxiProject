@@ -5,7 +5,7 @@ class getPatients{
 
     require_once("database.php");
 
-    $findPatients = "SELECT forename,surname FROM patient ";
+    $findPatients = "SELECT * FROM patient ";
     $findPatients .= "WHERE surname LIKE '%";
     $findPatients .= $q;
     $findPatients .= "%' ";
@@ -19,7 +19,7 @@ class getPatients{
     }
 
     while($patient = mysqli_fetch_assoc($result)){
-      $patients[] = array($patient["forename"],$patient["surname"]);
+      $patients[] = array($patient["forename"],$patient["surname"],$patient["patientID"],$patient["photoFile"]);
     }
 
     mysqli_free_result($result);

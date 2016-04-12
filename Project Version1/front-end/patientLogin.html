@@ -72,48 +72,7 @@
 
 	</style>
 	<script src="JavaScript/jquery-1.12.3.min.js"></script>
-	<script>
-	function showPatients(str) {
-    	if (str.length == 0) {
-					var xmlhttp = new XMLHttpRequest();
-					xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-								avators(JSON.parse(xmlhttp.responseText));
-						}
-					};
-					xmlhttp.open("GET", "getAll.php", true);
-					xmlhttp.send();
-    	} else {
-        	var xmlhttp = new XMLHttpRequest();
-        	xmlhttp.onreadystatechange = function() {
-            	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                	avators(JSON.parse(xmlhttp.responseText));
-            	}
-        	};
-        	xmlhttp.open("GET", "getPatients.php?q=" + str, true);
-        	xmlhttp.send();
-    	}
-
-    	function avators(a){
-    		for(i=0;i<8;i++){
-    			var n = "#a"+(i+1);
-    			$(n).show();
-					$(n).css("display","inline-block");
-    			if(a[i]==null){
-    				$(n).hide();
-    			}
-    			else{
-    				var p = "p"+(i+1);
-						var name = a[i][0] + " " + a[i][1];
-    				document.getElementById(p).innerHTML = name;
-    			}
-    		}
-    	}
-
-	}
-
-
-	</script>
+	<script src="JavaScript/getPatients.js"></script>
 
 </head>
 
@@ -121,38 +80,38 @@
 	<h2>Find your profile</h2>
 	<div>
 	<div id="a1" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l1" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p1">Name</h3></a>
 	</div>
 	<div id="a2" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l2" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p2">Name</h3></a>
 	</div>
 	<div id="a3" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l3" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p3">Name</h3></a>
 	</div>
 	<div id="a4" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l4" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p4">Name</h3></a>
 	</div>
 	</div>
 
 	<div>
 	<div id="a5" class="avator" hidden>
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l5" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p5">Name</h3></a>
 	</div>
 	<div id="a6" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l6" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p6">Name</h3></a>
 		</div>
 	<div id="a7" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l7" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p7">Name</h3></a>
 		</div>
 	<div id="a8" class="avator">
-		<a href="topicPage.html"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<a id="l8" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
 		<h3 id="p8">Name</h3></a>
 		</div>
 	</div>
