@@ -31,6 +31,9 @@ function showPatients(str) {
           var p = "p"+(i+1);
           var name = a[i][0] + " " + a[i][1];
           document.getElementById(p).innerHTML = name;
+          var l = "#l"+(i+1);
+          var patient = "topicPage.php?patientID="+a[i][2];
+          $(l).attr("href", patient);
         }
       }
     }
