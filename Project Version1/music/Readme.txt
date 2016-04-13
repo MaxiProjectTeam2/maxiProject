@@ -1,1 +1,0 @@
-You can put the music in this folder and add the path to the database.
