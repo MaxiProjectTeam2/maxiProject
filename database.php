@@ -47,6 +47,10 @@
             $this->confirm_query($result);
         	return $result;
         }
+        
+        public function insert($sql){
+        	mysqli_query($this->conn,$sql);
+        }
 
         public function escape_value($string){
         	$escaped_string = 
