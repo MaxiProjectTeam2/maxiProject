@@ -1,0 +1,1 @@
+You can add the picture of patient in this folder.

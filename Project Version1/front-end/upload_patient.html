@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="upload_patient.php" method="post" enctype="multipart/form-data">
+            <fieldset><legend><b>Create Patient</b></legend>
+                <table width="100%" border="0">
+                    <tr>
+                        <td><div align="left"><b>Forename</b></div></td>
+                        <td><div align="left"><b>Surname</b></div></td>
+                        <td><div align="left"><b>Upload Image</b></div></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div align="left">
+                                <input type="text" name="forename" />
+                            </div>
+                        </td>
+                        <td>
+                            <div align="left">
+                                <input type="text" name="surname" />
+                            </div>
+                        </td>
+                        <td>
+                            <div align="left">
+                                <input type="file" name="image" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                </table>
+                    <div align="center">
+                        <input type="submit" name="submit" value="Submit" />
+                    </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

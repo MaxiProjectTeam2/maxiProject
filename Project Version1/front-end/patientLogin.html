@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Login</title>
+
+	<style>
+		.ybutton{
+			font-size:200%;
+			text-transform: uppercase;
+			color: white;
+			text-shadow: 0.05em 0.05em #e6ac00;
+			padding: 0.3em;
+			padding-left:1.5em;
+			padding-right:1.5em;
+			background: linear-gradient(#ffd966, #ffbf00);
+			border-color:  #FFD85E;
+			border-radius: 0.1em;
+		}
+		body{
+			background-color:	#b3f0ff;
+		}
+		h2 {
+			font-family:Arial, Helvetica, sans-serif;
+			text-align: center;
+			font-size:350%;
+			margin: 1%;
+			margin-top: 2%;
+		}
+		h3 {
+			font-family:Arial, Helvetica, sans-serif;
+			text-align: center;
+			font-size:1em;
+			margin: 10%;
+		}
+
+		.avator{
+			display: inline-block;
+			display: none;
+			margin: 1%;
+			margin-left: 10%;
+			background-color: #ffbf00;
+			padding: 1%;
+			padding-bottom: 0%;
+			background: linear-gradient(#ffd966, #ffbf00);
+			border-color:  #FFD85E;
+			border-radius: 0.2em;
+			border: 0.2em;
+			border-color:  #FFD85E;
+			border-style: outset;
+		}
+		.previous{
+			margin-right: 7%;
+			text-align: left;
+			display: inline-block;
+		}
+		input{
+			font-size:100%;
+			width: 10em;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		p{
+			font-size:175%;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		.search{
+			text-align: right;
+			margin-left: 7%;
+			display: inline-block;
+		}
+
+	</style>
+	<script src="JavaScript/jquery-1.12.3.min.js"></script>
+	<script src="JavaScript/getPatients.js"></script>
+
+</head>
+
+<body>
+	<h2>Find your profile</h2>
+	<div>
+	<div id="a1" class="avator">
+		<a id="l1" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p1">Name</h3></a>
+	</div>
+	<div id="a2" class="avator">
+		<a id="l2" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p2">Name</h3></a>
+	</div>
+	<div id="a3" class="avator">
+		<a id="l3" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p3">Name</h3></a>
+	</div>
+	<div id="a4" class="avator">
+		<a id="l4" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p4">Name</h3></a>
+	</div>
+	</div>
+
+	<div>
+	<div id="a5" class="avator" hidden>
+		<a id="l5" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p5">Name</h3></a>
+	</div>
+	<div id="a6" class="avator">
+		<a id="l6" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p6">Name</h3></a>
+		</div>
+	<div id="a7" class="avator">
+		<a id="l7" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p7">Name</h3></a>
+		</div>
+	<div id="a8" class="avator">
+		<a id="l8" href="topicPage.php"><img class="img" src="patient.profile.picture/avator2.png" alt="user" height=150>
+		<h3 id="p8">Name</h3></a>
+		</div>
+	</div>
+
+	<div>
+	<p id="txtHint"></p>
+	<div class="previous">
+		<button class="ybutton" href="#">Previous</button>
+	</div>
+	<div class="search">
+		<form>
+			<p>Search:<input type="text" name="name" placeholder="name" value ="" class="search" style="display: inline-block;" onkeyup="showPatients(this.value)">
+			</p>
+		</form>
+	</div>
+	</div>
+
+</body>
+</html>
