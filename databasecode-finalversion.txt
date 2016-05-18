@@ -1,0 +1,38 @@
+CREATE TABLE admins(
+id INT NOT NULL AUTO_INCREMENT,
+username VARCHAR(50),
+hashed_password VARCHAR(60),
+priority INT,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE patient(
+patientID INT NOT NULL AUTO_INCREMENT,
+forename VARCHAR(45),
+surname VARCHAR(45),
+photoFile LONGTEXT,
+PRIMARY KEY(patientID)
+);
+
+CREATE TABLE content(
+contentID INT NOT NULL AUTO_INCREMENT,
+path LONGTEXT,
+caption VARCHAR(45),
+topic VARCHAR(45),
+subtopic VARCHAR(45),
+contentType VARCHAR(45),
+language VARCHAR(45),
+ContentTypeID INT NOT NULL,
+PRIMARY KEY(contentID)
+);
+
+CREATE TABLE viewhistory(
+ID INT  NOT NULL AUTO_INCREMENT,
+patientID INT NOT NULL,
+contentID INT NOT NULL,
+viewID INT,
+startTime time,
+endTime time,
+PRIMARY KEY(id),
+FOREIGN KEY (patientID) REFERENCES patient(patientID),
+FOREIGN KEY (contentID) REFERENCES content(contentID));
