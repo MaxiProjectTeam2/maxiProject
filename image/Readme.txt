@@ -1,1 +1,0 @@
-you can put the image in this folder and add the path to the database.
