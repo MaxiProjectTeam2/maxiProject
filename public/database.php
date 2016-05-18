@@ -8,10 +8,10 @@
         }
 
 		public function open_connection(){
-           	$dbhost = "localhost";
-        	$dbuser = "admin";
-            $dbpass = "[J%fLP+o]";
-            $dbname = "rtooldb";
+           	$dbhost = "";
+        	$dbuser = "";
+            $dbpass = "";
+            $dbname = "";
 
             $this->conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
             if($this->conn->connect_error){
