@@ -1,8 +1,8 @@
 <?php
-  define("DB_SERVER", "localhost");
-  define("DB_USER", "admin");
-  define("DB_PASS", "[J%fLP+o]");
-  define("DB_NAME", "rtooldb");
+  define("DB_SERVER", "");
+  define("DB_USER", "");
+  define("DB_PASS", "");
+  define("DB_NAME", "");
 
 
   // 1. Create a database connection
